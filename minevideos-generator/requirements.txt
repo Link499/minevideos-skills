@@ -1,0 +1,2 @@
+# No additional dependencies required
+# coze_workload_identity is pre-installed in the Coze skill runtime environment
