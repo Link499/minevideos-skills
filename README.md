@@ -16,6 +16,7 @@ AI agent skills for the MineVideos project and general-purpose agent workflows.
 
 | Skill | Description | Source |
 |-------|-------------|--------|
+| **impeccable-uxui** | 反AI模板设计：7领域参考 + 20 steering commands + 反模式清单 | [clawhub](https://clawhub.ai) |
 | **ui-ux-pro-max** | 67种风格 + 161配色 + 57字体 + 100推理规则 | [clawhub](https://clawhub.ai) |
 | **ui-ux-pro-max-cn** | 中文UI/UX规范：字体、行高、行业配色、小程序 | [clawhub](https://clawhub.ai) |
 | **product-design-gungun** | 产品设计：需求分析、PRD、原型、评审、A/B测试 | [clawhub](https://clawhub.ai) |
@@ -40,7 +41,9 @@ AI agent skills for the MineVideos project and general-purpose agent workflows.
 ```
 需求探索:  chat-req-first / product-design
     ↓
-设计决策:  ui-ux-pro-max (风格/配色) + ui-ux-pro-max-cn (中文)
+设计生成:  ui-ux-pro-max (风格/配色) + ui-ux-pro-max-cn (中文)
+    ↓
+质量审查:  impeccable-uxui (反AI模板/反模式检测)
     ↓
 开发流程:  superpowers (Brainstorm → Plan → TDD → Review)
     ↓
@@ -53,23 +56,19 @@ AI agent skills for the MineVideos project and general-purpose agent workflows.
 
 ```
 minevideos-skills/
-├── minevideos-generator/     # AI视频生成核心
+├── minevideos-generator/      # AI视频生成核心
 ├── minevideos-knowledge-graph/
 ├── minevideos-vision/
-├── ui-ux-pro-max/            # 含 data/ (CSV), assets/, scripts/
+├── impeccable-uxui/           # 7领域参考 + 反模式清单
+├── ui-ux-pro-max/             # 含 data/ (CSV), assets/, scripts/
 ├── ui-ux-pro-max-cn/
 ├── product-design-gungun/
-├── superpowers/              # 含 references/ (6个文档)
+├── superpowers/               # 含 references/ (6个文档)
 ├── critical-code-review/
 ├── codebase-memory-mcp/
 ├── agent-reach/
 ├── chat-req-first/
-└── memory/                   # 学习笔记
-    ├── product-design-notes.md
-    ├── superpowers-notes.md
-    ├── ui-ux-pro-max-notes.md
-    ├── taste-skill-notes.md
-    └── vibe-coding-notes.md
+└── memory/                    # 学习笔记
 ```
 
 ## Related Repos
